@@ -10,7 +10,7 @@ body {
   top: 0;
   left: 0;
   width: 100px;
-  height: 97vh;
+  height: 100vh;
   max-height: 100%;
   margin: 0 1px 0 0;
   padding: 10px;
@@ -31,7 +31,7 @@ body {
   top: 0;
   left: 0px;
   width: 180px;
-  height: 97vh;
+  height: 100vh;
   max-height: 100%;
   padding: 10px 10px 10px 10px;
   margin: 0 2px;
@@ -61,7 +61,7 @@ h1 {
   overflow-y: auto;
 }
 
-#mess-note {
+.mess {
   padding: 20px;
   max-width: 100%;
   max-height: 100px;
@@ -79,16 +79,16 @@ h1 {
   transition: 0.5s;
 }
 
-#mess-note:active, #mess-note:focus {
+.mess:active, .mess:focus {
   background-color: rgb(234, 167, 42);
 }
 
 .aside-box {
   top: 0;
   left: 0;
-  width: 76vw;
+  width: 77.3vw;
   max-width: 100%;
-  height: 97vh;
+  height: 100vh;
   max-height: 100%;
   margin: 0;
   padding: 0;
@@ -98,13 +98,13 @@ h1 {
 .aside-3 {
   top: 0;
   left: 0;
-  width: 76vw;
-  max-width: 100%;
-  height: 97vh;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  position: relative;
   padding: 10px;
   background-color: rgba(21, 21, 21, 0.78);
+  display: flex;
 }
 
 header {
@@ -114,9 +114,7 @@ header {
 .aside-3 div {
   display: flex;
   width: 100%;
-  height: 95%;
-  align-items: end;
-  bottom: 0;
+  color: white;
 }
 
 #message {
@@ -127,20 +125,6 @@ header {
 #message[type = text] {
   color: black;
   padding: 0 20px;
-}
-
-@keyframes slidein {
-  0% {
-    transform: translateX(0px);
-  }
-
-  100% {
-    transform: translateX(-200px);
-  }
-}
-
-.animate {
-  animation: slidein 1.5s ease-in linear;
 }
 
 #name, #message {
@@ -186,4 +170,19 @@ label {
 
 #done:active, #done:focus {
   scale: 0.8;
+}
+
+.write {
+  outline: none;
+  display: flex;
+  min-height: 20px;
+  overflow: auto;
+  word-break: break-word;
+  padding: 8px 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.takedowns {
+  margin: 0 auto 0 0;
 }
